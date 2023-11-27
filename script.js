@@ -111,7 +111,9 @@ async function addRepoToList(id, parent) {
 }
 
 input.addEventListener('keyup', () => {
-    optionList.innerHTML = null
+    if (optionList.childElementCount > 0) {
+        optionList.innerHTML = null
+    }
     createOptionList()
 })
 
